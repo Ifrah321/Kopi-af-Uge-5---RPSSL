@@ -1,4 +1,4 @@
-using System;                   // ← DENNE LINJE ER VIGTIG!
+using System;                  
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 
