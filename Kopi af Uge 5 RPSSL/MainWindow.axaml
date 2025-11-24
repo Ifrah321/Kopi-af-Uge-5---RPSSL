@@ -1,0 +1,29 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="Kopi_af_Uge_5_RPSSL.MainWindow"
+        Width="380" Height="330"
+        Title="RPSSL">
+
+    <StackPanel Margin="10" Spacing="8">
+
+        <TextBlock Text="RPSSL" FontSize="20"/>
+
+        <StackPanel Orientation="Horizontal" Spacing="5">
+            <Button Content="Rock" Click="Rock_Click"/>
+            <Button Content="Paper" Click="Paper_Click"/>
+            <Button Content="Scissors" Click="Scissors_Click"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Spacing="5">
+            <Button Content="Spock" Click="Spock_Click"/>
+            <Button Content="Lizard" Click="Lizard_Click"/>
+        </StackPanel>
+
+        <TextBlock x:Name="PlayerText" Text="Player: -" />
+        <TextBlock x:Name="AgentText" Text="Agent: -" />
+        <TextBlock x:Name="ResultText" Text="Result: -" />
+        <TextBlock x:Name="ScoreText" Text="Score: 0 - 0" />
+
+    </StackPanel>
+
+</Window>
