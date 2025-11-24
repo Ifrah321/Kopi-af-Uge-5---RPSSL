@@ -4,13 +4,13 @@ Agenten vælger en tilfældig shape ved hjælp af Random.
 
 Programmet viser:
 
-spillerens valg
+- Spillerens valg
 
-agentens valg
+- Agentens valg
 
-resultatet af runden
+- Resultatet af runden
 
-den løbende score
+- Den løbende score
 
 Når en af parterne når 3 point, vises vinderen, og scoren nulstilles.
 
