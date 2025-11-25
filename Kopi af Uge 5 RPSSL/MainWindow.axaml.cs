@@ -1,3 +1,8 @@
+// Koden her bygger direkte på eksemplerne fra Industrial Programming hjemmesiden:
+// https://industrial-programming.aydos.de
+// Specifikt fra "Week 5" hvor RPSSL, enum, Random og Avalonia code-behind gennemgås.
+// Jeg har brugt principperne fra aktiviteterne, men implementeret GUI-versionen selv.
+
 using System;                  
 using Avalonia.Controls;
 using Avalonia.Interactivity;
@@ -14,7 +19,8 @@ public partial class MainWindow : Window
         Spock,
         Lizard
     }
-
+// Denne enum er baseret på forklaringen i "Week 5 → Activity 29",
+// hvor alle 5 RPSSL-shapes bliver defineret i tabellen.
     private enum RoundResult
     {
         Tie,
@@ -60,7 +66,9 @@ public partial class MainWindow : Window
     }
 
     private void PlayRound(Shape player)
-    {
+    { 
+        // Random bruges på samme måde som i "Week 5 → Random numbers" afsnittet,
+// hvor vi lærer at generere værdier mellem 0 og 4 til RPSSL-tabellen.
         var agent = (Shape)r.Next(0, 5);
 
         PlayerText.Text = $"Player: {player}";
@@ -98,7 +106,10 @@ public partial class MainWindow : Window
             ScoreText.Text = "Score: 0 - 0";
         }
     }
-
+    
+// RPSSL-reglerne her følger præcis logikken fra "Week 5 → Activity 29: Resolution logic".
+// I materialet forklares modulo-formlen ((b - a + 5) % 5),
+// som jeg har brugt her og tilpasset til med mine egne enum-værdier og mønstre.
     private RoundResult Resolve(Shape p1, Shape p2)
     {
         int diff = ((int)p2 - (int)p1 + 5) % 5;
